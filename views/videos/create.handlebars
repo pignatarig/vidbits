@@ -1,0 +1,18 @@
+<div class="contents-container">
+  Save a video
+  {{#if error}}
+  <span>{{error}}</span>
+  {{/if}}
+  <form action="/videos" method="post" >
+    <label for="title">Title</label>
+    <input id="title" name="title" maxlength="50" value="{{video.title}}"/>
+    
+    <label for="description">Description</label>
+    <textarea id="description" name="description">{{video.description}}</textarea>
+    
+    <label for="url">URL</label>
+    <input id="url" name="url" maxlength="50" value="{{video.url}}"/>
+    
+    <input type="submit" id="submit"></input>
+  </form>
+</div>
